@@ -1,0 +1,76 @@
+Virtual User Script started at: 17.12.2024 0:33:09
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.55.0 for Windows 10; build 911 (èþë 24 2017 19:46:00)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0  	[MsgId: MMSG-26988]
+Run-Time Settings file: "C:\Users\Machete\Documents\VuGen\Scripts\UC1_LoginLogout\\default.cfg"  	[MsgId: MMSG-27141]
+Vuser directory: "C:\Users\Machete\Documents\VuGen\Scripts\UC1_LoginLogout"  	[MsgId: MMSG-27052]
+Vuser output directory: "C:\Users\Machete\Documents\VuGen\Scripts\UC1_LoginLogout"  	[MsgId: MMSG-27050]
+Operating system's current working directory: "c:\users\machete\documents\vugen\scripts\uc1_loginlogout"  	[MsgId: MMSG-27048]
+UTC (GMT) start date/time   : 2024-12-16 19:33:09  	[MsgId: MMSG-26992]
+LOCAL start date/time       : 2024-12-17 00:33:09  	[MsgId: MMSG-26991]
+Local daylight-Savings-Time : No  	[MsgId: MMSG-26990]
+Some of the Run-Time Settings:  	[MsgId: MMSG-27142]
+    Download non-HTML resources: Yes  	[MsgId: MMSG-27018]
+    Verification checks: No  	[MsgId: MMSG-27017]
+    Convert from/to UTF-8: No  	[MsgId: MMSG-27016]
+    Simulate a new user each iteration: Yes  	[MsgId: MMSG-27009]
+    Non-critical item errors as warnings: Yes  	[MsgId: MMSG-27008]
+    HTTP errors as warnings: No  	[MsgId: MMSG-27007]
+    WinInet replay instead of Sockets: No  	[MsgId: MMSG-27006]
+    HTTP version: 1.1  	[MsgId: MMSG-27005]
+    Keep-Alive HTTP connections: Yes  	[MsgId: MMSG-27004]
+    Max self Meta refresh updates: 2  	[MsgId: MMSG-27003]
+    No proxy is used (direct connection to the Internet)  	[MsgId: MMSG-27171]
+    DNS caching: Yes  	[MsgId: MMSG-27035]
+    Simulate browser cache: Yes  	[MsgId: MMSG-27034]
+        Cache URLs requiring content (e.g., HTMLs): Yes  	[MsgId: MMSG-27033]
+            Additional URLs requiring content: None  	[MsgId: MMSG-27032]
+        Check for newer versions every visit to the page: No  	[MsgId: MMSG-27031]
+    Page download timeout (sec): 120  	[MsgId: MMSG-27030]
+    Resource Page Timeout is a Warning: No  	[MsgId: MMSG-27029]
+    ContentCheck enabled: Yes  	[MsgId: MMSG-27028]
+    ContentCheck script-level file: "C:\Users\Machete\Documents\VuGen\Scripts\UC1_LoginLogout\LrwiAedScript.xml"  	[MsgId: MMSG-27027]
+    Enable Web Page Breakdown: No  	[MsgId: MMSG-27026]
+    Enable connection data points: Yes  	[MsgId: MMSG-27023]
+    Process socket after reschedule: Yes  	[MsgId: MMSG-27022]
+    Snapshot on error: No  	[MsgId: MMSG-27021]
+    Define each step as a transaction: No  	[MsgId: MMSG-27020]
+    Read beyond Content-Length: No  	[MsgId: MMSG-26994]
+    Parse HTML Content-Type: TEXT  	[MsgId: MMSG-26999]
+    Graph hits per second and HTTP status codes: Yes  	[MsgId: MMSG-26998]
+    Graph response bytes per second: Yes  	[MsgId: MMSG-26997]
+    Graph pages per second: No  	[MsgId: MMSG-26996]
+    Web recorder version ID: 10  	[MsgId: MMSG-26995]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action LoginLogout.
+LoginLogout.c(4): Notify: Transaction "LoginLogout" started.
+LoginLogout.c(6): Notify: Transaction "GotoWebTours" started.
+LoginLogout.c(8): web_reg_find started  	[MsgId: MMSG-26355]
+LoginLogout.c(8): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+LoginLogout.c(11): web_url("welcome.pl") started  	[MsgId: MMSG-26355]
+LoginLogout.c(11): t=287ms: Connecting [0] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+LoginLogout.c(11): Error -27792: Failed to connect to server "localhost:1080": [10061] Connection refused  	[MsgId: MERR-27792]
+LoginLogout.c(11): t=2334ms: Closed connection [0] to localhost:1080 after completing 0 request(s)  	[MsgId: MMSG-26000]
+LoginLogout.c(11): Error -26366: "Text=Welcome to the Web Tours site" not found for web_reg_find  	[MsgId: MERR-26366]
+LoginLogout.c(11): Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+LoginLogout.c(11): web_url("welcome.pl") highest severity level was "ERROR", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+LoginLogout.c(11): Notify: Transaction "GotoWebTours" ended with a "Fail" status (Duration: 2,1586 Wasted Time: 0,0671).
+LoginLogout.c(11): Notify: Transaction "GotoWebTours" has 3 error message(s).
+LoginLogout.c(11): Notify: The 1st error message associated with transaction "GotoWebTours" is "Error -27792: Failed to connect to server "localhost:1080": [10061] Connection refused"
+LoginLogout.c(11): Notify: The 2nd error message associated with transaction "GotoWebTours" is "Error -26366: "Text=Welcome to the Web Tours site" not found for web_reg_find"
+LoginLogout.c(11): Notify: The 3rd error message associated with transaction "GotoWebTours" is "Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively."
+LoginLogout.c(11): Notify: Transaction "LoginLogout" ended with a "Fail" status (Duration: 2,1743 Wasted Time: 0,0671).
+LoginLogout.c(11): Notify: Transaction "LoginLogout" has 3 error message(s).
+LoginLogout.c(11): Notify: The 1st error message associated with transaction "LoginLogout" is "Error -27792: Failed to connect to server "localhost:1080": [10061] Connection refused"
+LoginLogout.c(11): Notify: The 2nd error message associated with transaction "LoginLogout" is "Error -26366: "Text=Welcome to the Web Tours site" not found for web_reg_find"
+LoginLogout.c(11): Notify: The 3rd error message associated with transaction "LoginLogout" is "Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively."
+Ending action LoginLogout.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

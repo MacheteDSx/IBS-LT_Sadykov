@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+Date: Sun, 15 Dec 2024 15:37:40 GMT
+Server: Apache/2.2.21 (Win32)
+Expires: 5s
+Set-Cookie: MTUserInfo=firstName&Sheldon&address2&Pasadena&username&Sheldon&hash&14&lastName&Cooper%0A&address1&2311%20N%20Los%20Robles%20Ave&creditCard&&expDate&%0A; path=/
+Content-Type: text/html; charset=ISO-8859-1
+

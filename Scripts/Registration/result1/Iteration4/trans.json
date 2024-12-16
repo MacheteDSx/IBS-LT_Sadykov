@@ -1,0 +1,27 @@
+[
+    {
+        "transactionName": "GotoWebTours",
+        "rawStartTime": 1734368168472,
+        "rawEndTime": 1734368168677
+    },
+    {
+        "transactionName": "ToSignUpNow",
+        "rawStartTime": 1734368168708,
+        "rawEndTime": 1734368168882
+    },
+    {
+        "transactionName": "ToRegister",
+        "rawStartTime": 1734368168913,
+        "rawEndTime": 1734368169053
+    },
+    {
+        "transactionName": "ThankYouForRegister",
+        "rawStartTime": 1734368169085,
+        "rawEndTime": 1734368169271
+    },
+    {
+        "transactionName": "Logout",
+        "rawStartTime": 1734368169301,
+        "rawEndTime": 1734368169475
+    }
+]

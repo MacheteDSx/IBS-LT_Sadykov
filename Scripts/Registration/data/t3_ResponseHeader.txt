@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+Date: Sun, 08 Dec 2024 15:59:37 GMT
+Server: Apache/2.2.21 (Win32)
+Expires: 5s
+Set-Cookie: MTUserInfo=firstName&Raj&address2&Pasadena&username&Raj&hash&74&lastName&Koothrappali&address1&56%20Maple%20Dr&creditCard&&expDate&; path=/
+Content-Type: text/html; charset=ISO-8859-1
+

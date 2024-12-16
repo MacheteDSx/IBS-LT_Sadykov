@@ -1,0 +1,32 @@
+[
+    {
+        "stepId": "STEP16",
+        "stepName": "Url: welcome.pl",
+        "infFile": "t1.inf",
+        "time": 1734368168671
+    },
+    {
+        "stepId": "STEP17",
+        "stepName": "Url: login.pl",
+        "infFile": "t2.inf",
+        "time": 1734368168879
+    },
+    {
+        "stepId": "STEP18",
+        "stepName": "Submit Form: login.pl_2",
+        "infFile": "t3.inf",
+        "time": 1734368169038
+    },
+    {
+        "stepId": "STEP19",
+        "stepName": "Image: button_next.gif",
+        "infFile": "t4.inf",
+        "time": 1734368169255
+    },
+    {
+        "stepId": "STEP20",
+        "stepName": "Image: SignOff Button",
+        "infFile": "t5.inf",
+        "time": 1734368169462
+    }
+]

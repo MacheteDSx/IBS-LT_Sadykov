@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\Machete\Documents\VuGen\Scripts\UC5_ItineraryDelete
+-IC:\Program Files (x86)\HPE\LoadRunner\include
+-ec:\users\machete\documents\vugen\scripts\uc5_itinerarydelete\\logfile.log
+c:\users\machete\documents\vugen\scripts\uc5_itinerarydelete\\combined_UC5_ItineraryDelete.c
+c:\users\machete\documents\vugen\scripts\uc5_itinerarydelete\\pre_cci.c

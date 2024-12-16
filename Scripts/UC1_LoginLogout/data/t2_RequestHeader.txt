@@ -1,0 +1,14 @@
+POST http://localhost:1080/cgi-bin/login.pl HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Origin: http://localhost:1080
+Referer: http://localhost:1080/cgi-bin/nav.pl?in=home
+Cookie: 07-Dec-2024 16:25:32 GMT; MSO=SID&1733675132; MTUserInfo=
+Upgrade-Insecure-Requests: 1
+Priority: u=4
+Host: localhost:1080
+Content-Length: 125
+

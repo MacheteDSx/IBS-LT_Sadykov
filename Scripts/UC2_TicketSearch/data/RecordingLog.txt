@@ -1,0 +1,201 @@
+[API Trapper      (3e00:aa04)] Recording in 32-bit mode: C:\Program Files (x86)\HPE\LoadRunner\Bin\HP.LR.ProxyRecorderStarter.exe
+[Network Analyzer ( 124:ae20)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( 124:ae20)] Load Network Traffic Analyzers:
+[Network Analyzer ( 124:ae20)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer ( 124:ae20)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer ( 124:ae20)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer ( 124:ae20)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer ( 124:ae20)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer ( 124:ae20)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer ( 124:ae20)] ------------------------------------------------------------------------------------------
+[Proxy Recording  ( 124:ae20)] Started proxy on port 8888 listening IP 172.27.176.1, 192.168.0.8, in asynchronous mode
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56194
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?signOff=true ...
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?signOff=true ...
+[Proxy Recording  ( 124:a3fc)] Received response from http://localhost:1080/cgi-bin/welcome.pl?signOff=true
+[Proxy Recording  ( 124:a3fc)] Sent response to client @ 192.168.0.8:56194
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56200
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?in=home ...
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?in=home ...
+[Web Request      ( 124:a3fc)] "GET http://localhost:1080/cgi-bin/welcome.pl?signOff=true"   
+[Network Analyzer ( 124:a3fc)]   (Sid:  1) Client -> Server @ : 456 bytes (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid:  1) Server -> Client : 287 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid:  1) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:4254)] Received response from http://localhost:1080/cgi-bin/nav.pl?in=home
+[Proxy Recording  ( 124:4254)] Sent response to client @ 192.168.0.8:56200
+[Web Request      ( 124:4254)] "GET http://localhost:1080/cgi-bin/nav.pl?in=home"   
+[Network Analyzer ( 124:4254)]   (Sid:  2) Client -> Server @ : 512 bytes (Service=HTTP)
+[Network Analyzer ( 124:4254)]   (Sid:  2) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer ( 124:4254)]   (Sid:  2) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:4254)]   (Sid:  2) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56213
+[Proxy Recording  ( 124:b12c)] Trying to connect to http://localhost:1080/cgi-bin/login.pl ...
+[Proxy Recording  ( 124:b12c)] Trying to connect to http://localhost:1080/cgi-bin/login.pl ...
+[Proxy Recording  ( 124:b12c)] Received response from http://localhost:1080/cgi-bin/login.pl
+[Proxy Recording  ( 124:b12c)] Sent response to client @ 192.168.0.8:56213
+[Network Analyzer ( 124:b12c)]   (Sid:  3) Client -> Server @ : 599 bytes (Service=HTTP)
+[Web Request      ( 124:b12c)] "POST http://localhost:1080/cgi-bin/login.pl"   
+[Network Analyzer ( 124:b12c)]   (Sid:  3) Client -> Server @ : 124 bytes (Service=HTTP)
+[Network Analyzer ( 124:b12c)]   (Sid:  3) Server -> Client : 320 bytes  (Service=HTTP)
+[Network Analyzer ( 124:b12c)]   (Sid:  3) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56215
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56216
+[Proxy Recording  ( 124:b12c)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home ...
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://localhost:1080/cgi-bin/login.pl?intro=true ...
+[Proxy Recording  ( 124:b12c)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home ...
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://localhost:1080/cgi-bin/login.pl?intro=true ...
+[Proxy Recording  ( 124:4254)] Received response from http://localhost:1080/cgi-bin/login.pl?intro=true
+[Proxy Recording  ( 124:4254)] Sent response to client @ 192.168.0.8:56216
+[Web Request      ( 124:4254)] "GET http://localhost:1080/cgi-bin/login.pl?intro=true"   
+[Network Analyzer ( 124:4254)]   (Sid:  4) Client -> Server @ : 644 bytes (Service=HTTP)
+[Network Analyzer ( 124:4254)]   (Sid:  4) Server -> Client : 145 bytes  (Service=HTTP)
+[Network Analyzer ( 124:4254)]   (Sid:  4) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:a3fc)] Received response from http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home
+[Proxy Recording  ( 124:a3fc)] Sent response to client @ 192.168.0.8:56215
+[Web Request      ( 124:a3fc)] "GET http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home"   
+[Network Analyzer ( 124:a3fc)]   (Sid:  5) Client -> Server @ : 649 bytes (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid:  5) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid:  5) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid:  5) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56219
+[Proxy Recording  ( 124:ad00)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?page=search ...
+[Proxy Recording  ( 124:ad00)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?page=search ...
+[Proxy Recording  ( 124:4254)] Received response from http://localhost:1080/cgi-bin/welcome.pl?page=search
+[Proxy Recording  ( 124:4254)] Sent response to client @ 192.168.0.8:56219
+[Web Request      ( 124:4254)] "GET http://localhost:1080/cgi-bin/welcome.pl?page=search"   
+[Network Analyzer ( 124:4254)]   (Sid:  6) Client -> Server @ : 663 bytes (Service=HTTP)
+[Network Analyzer ( 124:4254)]   (Sid:  6) Server -> Client : 132 bytes  (Service=HTTP)
+[Network Analyzer ( 124:4254)]   (Sid:  6) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56220
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56221
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=flights ...
+[Proxy Recording  ( 124:ad00)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl?page=welcome ...
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=flights ...
+[Proxy Recording  ( 124:ad00)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl?page=welcome ...
+[Proxy Recording  ( 124:a3fc)] Received response from http://localhost:1080/cgi-bin/nav.pl?page=menu&in=flights
+[Proxy Recording  ( 124:a3fc)] Sent response to client @ 192.168.0.8:56220
+[Web Request      ( 124:a3fc)] "GET http://localhost:1080/cgi-bin/nav.pl?page=menu&in=flights"   
+[Network Analyzer ( 124:a3fc)]   (Sid:  7) Client -> Server @ : 666 bytes (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid:  7) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid:  7) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid:  7) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:4254)] Received response from http://localhost:1080/cgi-bin/reservations.pl?page=welcome
+[Proxy Recording  ( 124:4254)] Sent response to client @ 192.168.0.8:56221
+[Web Request      ( 124:4254)] "GET http://localhost:1080/cgi-bin/reservations.pl?page=welcome"   
+[Network Analyzer ( 124:4254)]   (Sid:  8) Client -> Server @ : 667 bytes (Service=HTTP)
+[Network Analyzer ( 124:4254)]   (Sid:  8) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer ( 124:4254)]   (Sid:  8) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:4254)]   (Sid:  8) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:4254)]   (Sid:  8) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid:  8) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:4254)]   (Sid:  8) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56227
+[Proxy Recording  ( 124:b12c)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  ( 124:b12c)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  ( 124:b12c)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  ( 124:b12c)] Sent response to client @ 192.168.0.8:56227
+[Network Analyzer ( 124:b12c)]   (Sid:  9) Client -> Server @ : 762 bytes (Service=HTTP)
+[Web Request      ( 124:b12c)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer ( 124:b12c)]   (Sid:  9) Client -> Server @ : 236 bytes (Service=HTTP)
+[Network Analyzer ( 124:b12c)]   (Sid:  9) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer ( 124:b12c)]   (Sid:  9) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:b12c)]   (Sid:  9) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:b12c)]   (Sid:  9) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56229
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://detectportal.firefox.com/canonical.html ...
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://detectportal.firefox.com/canonical.html ...
+[Proxy Recording  ( 124:a3fc)] Received response from http://detectportal.firefox.com/canonical.html
+[Proxy Recording  ( 124:a3fc)] Sent response to client @ 192.168.0.8:56229
+[Web Request      ( 124:a3fc)] "GET http://detectportal.firefox.com/canonical.html"   
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56231
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56232
+[Proxy Recording  ( 124:b12c)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv4 ...
+[Network Analyzer ( 124:a3fc)]   (Sid: 10) Client -> Server @ : 355 bytes (Service=HTTP)
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv6 ...
+[Proxy Recording  ( 124:b12c)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv4 ...
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv6 ...
+[Network Analyzer ( 124:a3fc)]   (Sid: 10) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid: 10) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:a3fc)] Received response from http://detectportal.firefox.com/success.txt?ipv4
+[Proxy Recording  ( 124:a3fc)] Sent response to client @ 192.168.0.8:56231
+[Web Request      ( 124:a3fc)] "GET http://detectportal.firefox.com/success.txt?ipv4"   
+[Network Analyzer ( 124:a3fc)]   (Sid: 11) Client -> Server @ : 348 bytes (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid: 11) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid: 11) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:a3fc)] Received response from http://detectportal.firefox.com/success.txt?ipv6
+[Proxy Recording  ( 124:a3fc)] Sent response to client @ 192.168.0.8:56232
+[Web Request      ( 124:a3fc)] "GET http://detectportal.firefox.com/success.txt?ipv6"   
+[Network Analyzer ( 124:a3fc)]   (Sid: 12) Client -> Server @ : 348 bytes (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid: 12) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid: 12) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56234
+[Proxy Recording  ( 124:ad00)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  ( 124:ad00)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  ( 124:ad00)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  ( 124:ad00)] Sent response to client @ 192.168.0.8:56234
+[Network Analyzer ( 124:ad00)]   (Sid: 13) Client -> Server @ : 749 bytes (Service=HTTP)
+[Web Request      ( 124:ad00)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer ( 124:ad00)]   (Sid: 13) Client -> Server @ : 143 bytes (Service=HTTP)
+[Network Analyzer ( 124:ad00)]   (Sid: 13) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer ( 124:ad00)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:ad00)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:ad00)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56252
+[Proxy Recording  ( 124:b12c)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  ( 124:b12c)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  ( 124:b12c)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  ( 124:b12c)] Sent response to client @ 192.168.0.8:56252
+[Network Analyzer ( 124:b12c)]   (Sid: 14) Client -> Server @ : 749 bytes (Service=HTTP)
+[Web Request      ( 124:b12c)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer ( 124:b12c)]   (Sid: 14) Client -> Server @ : 349 bytes (Service=HTTP)
+[Network Analyzer ( 124:b12c)]   (Sid: 14) Server -> Client : 323 bytes  (Service=HTTP)
+[Network Analyzer ( 124:b12c)]   (Sid: 14) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:b12c)]   (Sid: 14) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:b12c)]   (Sid: 14) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56262
+[Proxy Recording  ( 124:ad00)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?page=menus ...
+[Proxy Recording  ( 124:ad00)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?page=menus ...
+[Proxy Recording  ( 124:a3fc)] Received response from http://localhost:1080/cgi-bin/welcome.pl?page=menus
+[Proxy Recording  ( 124:a3fc)] Sent response to client @ 192.168.0.8:56262
+[Web Request      ( 124:a3fc)] "GET http://localhost:1080/cgi-bin/welcome.pl?page=menus"   
+[Network Analyzer ( 124:a3fc)]   (Sid: 15) Client -> Server @ : 641 bytes (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid: 15) Server -> Client : 132 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid: 15) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56264
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home ...
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56265
+[Proxy Recording  ( 124:98e0)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home ...
+[Proxy Recording  ( 124:ad00)] Trying to connect to http://localhost:1080/cgi-bin/login.pl?intro=true ...
+[Proxy Recording  ( 124:ad00)] Trying to connect to http://localhost:1080/cgi-bin/login.pl?intro=true ...
+[Proxy Recording  ( 124:a3fc)] Received response from http://localhost:1080/cgi-bin/login.pl?intro=true
+[Proxy Recording  ( 124:a3fc)] Sent response to client @ 192.168.0.8:56265
+[Web Request      ( 124:a3fc)] "GET http://localhost:1080/cgi-bin/login.pl?intro=true"   
+[Network Analyzer ( 124:a3fc)]   (Sid: 16) Client -> Server @ : 633 bytes (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid: 16) Server -> Client : 145 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid: 16) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:a45c)] Received response from http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home
+[Proxy Recording  ( 124:a45c)] Sent response to client @ 192.168.0.8:56264
+[Web Request      ( 124:a45c)] "GET http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home"   
+[Network Analyzer ( 124:a45c)]   (Sid: 17) Client -> Server @ : 638 bytes (Service=HTTP)
+[Network Analyzer ( 124:a45c)]   (Sid: 17) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a45c)]   (Sid: 17) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a45c)]   (Sid: 17) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56268
+[Proxy Recording  ( 124:b12c)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?signOff=1 ...
+[Proxy Recording  ( 124:b12c)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?signOff=1 ...
+[Proxy Recording  ( 124:adf4)] Received response from http://localhost:1080/cgi-bin/welcome.pl?signOff=1
+[Proxy Recording  ( 124:adf4)] Sent response to client @ 192.168.0.8:56268
+[Web Request      ( 124:adf4)] "GET http://localhost:1080/cgi-bin/welcome.pl?signOff=1"   
+[Network Analyzer ( 124:adf4)]   (Sid: 18) Client -> Server @ : 637 bytes (Service=HTTP)
+[Network Analyzer ( 124:adf4)]   (Sid: 18) Server -> Client : 231 bytes  (Service=HTTP)
+[Network Analyzer ( 124:adf4)]   (Sid: 18) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  ( 124:5754)] Client request from @ 192.168.0.8:56269
+[Proxy Recording  ( 124:ad00)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?in=home ...
+[Proxy Recording  ( 124:ad00)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?in=home ...
+[Proxy Recording  ( 124:a3fc)] Received response from http://localhost:1080/cgi-bin/nav.pl?in=home
+[Proxy Recording  ( 124:a3fc)] Sent response to client @ 192.168.0.8:56269
+[Web Request      ( 124:a3fc)] "GET http://localhost:1080/cgi-bin/nav.pl?in=home"   
+[Network Analyzer ( 124:a3fc)]   (Sid: 19) Client -> Server @ : 509 bytes (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid: 19) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid: 19) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer ( 124:a3fc)]   (Sid: 19) Server -> Client : 1024 bytes  (Service=HTTP)

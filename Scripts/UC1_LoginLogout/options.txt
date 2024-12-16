@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\Machete\Documents\VuGen\Scripts\UC1_LoginLogout
+-IC:\Program Files (x86)\HPE\LoadRunner\include
+-ec:\users\machete\documents\vugen\scripts\uc1_loginlogout\\logfile.log
+c:\users\machete\documents\vugen\scripts\uc1_loginlogout\\combined_UC1_LoginLogout.c
+c:\users\machete\documents\vugen\scripts\uc1_loginlogout\\pre_cci.c

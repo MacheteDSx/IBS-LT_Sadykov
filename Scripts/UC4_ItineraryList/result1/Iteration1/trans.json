@@ -1,0 +1,32 @@
+[
+    {
+        "transactionName": "GotoWebTours",
+        "rawStartTime": 1734377758935,
+        "rawEndTime": 1734377759247
+    },
+    {
+        "transactionName": "Login",
+        "rawStartTime": 1734377759278,
+        "rawEndTime": 1734377759540
+    },
+    {
+        "transactionName": "GotoItinerary",
+        "rawStartTime": 1734377759570,
+        "rawEndTime": 1734377759819
+    },
+    {
+        "transactionName": "GotoHome",
+        "rawStartTime": 1734377759835,
+        "rawEndTime": 1734377760084
+    },
+    {
+        "transactionName": "Logout",
+        "rawStartTime": 1734377760115,
+        "rawEndTime": 1734377760317
+    },
+    {
+        "transactionName": "ItineraryList",
+        "rawStartTime": 1734377758919,
+        "rawEndTime": 1734377760332
+    }
+]

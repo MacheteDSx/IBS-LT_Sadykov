@@ -1,0 +1,7 @@
+#include "lrun.h"
+#include "SharedParameter.h"
+#include "globals.h"
+#include "vuser_init.c"
+#include "BuyTicket.c"
+#include "BuyTicket3Passengers.c"
+#include "vuser_end.c"

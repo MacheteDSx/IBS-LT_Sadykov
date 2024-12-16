@@ -1,0 +1,73 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=UC2_TicketSearch.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=55
+ActiveTypes=QTWeb
+GenerateTypes=QTWeb
+AdditionalTypes=QTWeb
+DevelopTool=Vugen
+LastModifyVer=12.55.0.911
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=12.55.0.911
+DisableRegenerate=0
+Encoding=ANSI
+Description=
+ScriptLocale=ru-RU
+[Actions]
+vuser_init=vuser_init.c
+TicketSearch=TicketSearch.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=0
+TicketSearch=1
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+TicketSearch=1
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+TicketSearch=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+TicketSearch=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="TicketSearch__*delimiter*__GotoWebTours__*delimiter*__Login__*delimiter*__GotoFlights__*delimiter*__FindFlight__*delimiter*__GotoHome__*delimiter*__Logout"
+[StateManagement]
+LastReplayStatus=1
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[ParameterSimulation]
+NumVusers=5
+IsDurationIndefinite=1
+NumIterationsUntilCompletion=10
+IterationFromRTS=0
+NumIterationIndefinitely=5
+[Transactions]
+TicketSearch=
+GotoWebTours=
+Login=
+GotoFlights=
+FindFlight=
+GotoHome=
+Logout=

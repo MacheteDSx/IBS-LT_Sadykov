@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\Machete\Documents\VuGen\Scripts\UC4_ItineraryList
+-IC:\Program Files (x86)\HPE\LoadRunner\include
+-ec:\users\machete\documents\vugen\scripts\uc4_itinerarylist\\logfile.log
+c:\users\machete\documents\vugen\scripts\uc4_itinerarylist\\combined_UC4_ItineraryList.c
+c:\users\machete\documents\vugen\scripts\uc4_itinerarylist\\pre_cci.c

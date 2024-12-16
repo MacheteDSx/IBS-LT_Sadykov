@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+Date: Mon, 16 Dec 2024 19:09:14 GMT
+Server: Apache/2.2.21 (Win32)
+Expires: Sun, 15 Dec 2024 19:09:14 GMT
+Set-Cookie: MTUserInfo=firstName&Sheldon&username&Sheldon&address2&Pasadena&hash&14&address1&Sheldon&lastName&Cooper%0A; path=/
+Content-Type: text/html; charset=ISO-8859-1
+

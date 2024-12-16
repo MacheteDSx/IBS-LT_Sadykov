@@ -1,0 +1,1775 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED SolManSolutionId CDATA #IMPLIED SolManProjectId CDATA #IMPLIED SolManTestPlanId CDATA #IMPLIED SolManTestPackageId CDATA #IMPLIED SolManUserInfoData CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,ConfName?,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Doc*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC|BPTWrapperTest|Flow|Group|Action) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT ConfName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step*,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*, Summary,ActionMaintenanceSummary*, NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,DataMapping?, Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED isCountable (False|True) "False" >
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*, DataMapping?, NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT DataMapping ( DataMappedItem* )>
+<!ELEMENT DataMappedItem EMPTY >
+<!ATTLIST DataMappedItem dsName CDATA #REQUIRED >
+<!ATTLIST DataMappedItem rowId CDATA #REQUIRED >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?,ExtendedInfo? )>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED UserNote CDATA #IMPLIED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED StepFlowItemKey CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT ExtendedInfo ( StepData ) >
+
+<!ATTLIST ExtendedInfo StepType CDATA #REQUIRED>
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="RTZ 4 (зима)">
+<General productName="Vugen" productVer="12" os="" host="MACHETE"><DocLocation><![CDATA[C:\Users\Machete\Documents\VuGen\Scripts\Registration]]></DocLocation></General>
+<Doc rID="T1"   productName= "Vugen"  >
+<DName><![CDATA[Registration]]></DName>
+<Res><![CDATA[result1]]></Res>
+<Action rID="T2">
+<AName><![CDATA[vuser_init]]></AName>
+<Summary sTime="16.12.2024 - 21:56:05" eTime="16.12.2024 - 21:56:05" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="5" >
+<Disp><![CDATA[vuser_init Summary]]></Disp>
+</NodeArgs>
+</Action>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Reg]]></AName>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:05]]></Time>
+<TimeTick>1734368165</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="9" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>MSO_Value</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=MSO=SID&</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=;</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:05]]></Time>
+<TimeTick>1734368165</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="10" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>UserSession</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=name="userSession" value="</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:05]]></Time>
+<TimeTick>1734368165</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="11" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[Url: welcome.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:05]]></Time>
+<TimeTick>1734368165</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="12" status="Passed" >
+<Disp><![CDATA[Url: welcome.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=First time registering</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:05]]></Time>
+<TimeTick>1734368165</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="13" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>16-дек-2024 21:56:05 GMT GMT; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:05]]></Time>
+<TimeTick>1734368165</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="14" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>MSO=SID&1734368165; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:05]]></Time>
+<TimeTick>1734368165</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="15" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[Url: login.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:05]]></Time>
+<TimeTick>1734368165</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="16" status="Passed" >
+<Disp><![CDATA[Url: login.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=<blockquote>Thank you, <b>Sheldon</b>,</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:05]]></Time>
+<TimeTick>1734368165</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="17" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Origin: http://localhost:1080</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:05]]></Time>
+<TimeTick>1734368165</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="18" >
+<Disp><![CDATA[Service: Add Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[Submit Form: login.pl_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:05]]></Time>
+<TimeTick>1734368165</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="19" status="Passed" >
+<Disp><![CDATA[Submit Form: login.pl_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome, <b>Sheldon</b>, to the Web Tours reservation pages</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:05]]></Time>
+<TimeTick>1734368165</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="20" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Image: button_next.gif]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="21" status="Passed" >
+<Disp><![CDATA[Image: button_next.gif]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T18">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="22" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T19">
+<Obj plainTxt="False" ><![CDATA[Image: SignOff Button]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="23" status="Passed" >
+<Disp><![CDATA[Image: SignOff Button]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="16.12.2024 - 21:56:05" eTime="16.12.2024 - 21:56:06" passed="5" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="8" status="Passed" >
+<Disp><![CDATA[Reg Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="7" status="Passed" >
+<Disp><![CDATA[Registration Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T20" iterID="2" >
+<Action rID="T21">
+<AName><![CDATA[Reg]]></AName>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="28" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>MSO_Value</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=MSO=SID&</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=;</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="29" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>UserSession</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=name="userSession" value="</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="30" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj plainTxt="False" ><![CDATA[Url: welcome.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="31" status="Passed" >
+<Disp><![CDATA[Url: welcome.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=First time registering</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="32" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>16-дек-2024 21:56:06 GMT GMT; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="33" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>MSO=SID&1734368166; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="34" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[Url: login.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="35" status="Passed" >
+<Disp><![CDATA[Url: login.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=<blockquote>Thank you, <b>Leonard</b>,</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="36" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Origin: http://localhost:1080</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="37" >
+<Disp><![CDATA[Service: Add Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[Submit Form: login.pl_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="38" status="Passed" >
+<Disp><![CDATA[Submit Form: login.pl_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome, <b>Leonard</b>, to the Web Tours reservation pages</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:06]]></Time>
+<TimeTick>1734368166</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="39" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T34">
+<Obj plainTxt="False" ><![CDATA[Image: button_next.gif]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="40" status="Passed" >
+<Disp><![CDATA[Image: button_next.gif]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="41" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T36">
+<Obj plainTxt="False" ><![CDATA[Image: SignOff Button]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="42" status="Passed" >
+<Disp><![CDATA[Image: SignOff Button]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="16.12.2024 - 21:56:06" eTime="16.12.2024 - 21:56:07" passed="5" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="27" status="Passed" >
+<Disp><![CDATA[Reg Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="26" status="Passed" >
+<Disp><![CDATA[Registration Iteration 2 (Row 2)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T37" iterID="3" >
+<Action rID="T38">
+<AName><![CDATA[Reg]]></AName>
+<Step rID="T39">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="47" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>MSO_Value</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=MSO=SID&</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=;</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="48" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>UserSession</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=name="userSession" value="</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="49" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T42">
+<Obj plainTxt="False" ><![CDATA[Url: welcome.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="50" status="Passed" >
+<Disp><![CDATA[Url: welcome.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T43">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=First time registering</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="51" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T44">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>16-дек-2024 21:56:07 GMT GMT; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="52" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T45">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>MSO=SID&1734368167; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="53" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T46">
+<Obj plainTxt="False" ><![CDATA[Url: login.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="54" status="Passed" >
+<Disp><![CDATA[Url: login.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T47">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=<blockquote>Thank you, <b>Howard</b>,</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="55" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T48">
+<Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Origin: http://localhost:1080</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="56" >
+<Disp><![CDATA[Service: Add Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T49">
+<Obj plainTxt="False" ><![CDATA[Submit Form: login.pl_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:07]]></Time>
+<TimeTick>1734368167</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="57" status="Passed" >
+<Disp><![CDATA[Submit Form: login.pl_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T50">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome, <b>Howard</b>, to the Web Tours reservation pages</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="58" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T51">
+<Obj plainTxt="False" ><![CDATA[Image: button_next.gif]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="59" status="Passed" >
+<Disp><![CDATA[Image: button_next.gif]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T52">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="60" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T53">
+<Obj plainTxt="False" ><![CDATA[Image: SignOff Button]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="61" status="Passed" >
+<Disp><![CDATA[Image: SignOff Button]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="16.12.2024 - 21:56:07" eTime="16.12.2024 - 21:56:08" passed="5" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="46" status="Passed" >
+<Disp><![CDATA[Reg Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="45" status="Passed" >
+<Disp><![CDATA[Registration Iteration 3 (Row 3)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T54" iterID="4" >
+<Action rID="T55">
+<AName><![CDATA[Reg]]></AName>
+<Step rID="T56">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="66" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T57">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>MSO_Value</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=MSO=SID&</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=;</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="67" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T58">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>UserSession</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=name="userSession" value="</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="68" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T59">
+<Obj plainTxt="False" ><![CDATA[Url: welcome.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="69" status="Passed" >
+<Disp><![CDATA[Url: welcome.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T60">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=First time registering</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="70" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T61">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>16-дек-2024 21:56:08 GMT GMT; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="71" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T62">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>MSO=SID&1734368168; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="72" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T63">
+<Obj plainTxt="False" ><![CDATA[Url: login.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="73" status="Passed" >
+<Disp><![CDATA[Url: login.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T64">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=<blockquote>Thank you, <b>Raj</b>,</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="74" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T65">
+<Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Origin: http://localhost:1080</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:08]]></Time>
+<TimeTick>1734368168</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="75" >
+<Disp><![CDATA[Service: Add Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T66">
+<Obj plainTxt="False" ><![CDATA[Submit Form: login.pl_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="76" status="Passed" >
+<Disp><![CDATA[Submit Form: login.pl_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T67">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome, <b>Raj</b>, to the Web Tours reservation pages</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="77" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T68">
+<Obj plainTxt="False" ><![CDATA[Image: button_next.gif]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="78" status="Passed" >
+<Disp><![CDATA[Image: button_next.gif]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T69">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="79" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T70">
+<Obj plainTxt="False" ><![CDATA[Image: SignOff Button]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="80" status="Passed" >
+<Disp><![CDATA[Image: SignOff Button]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="16.12.2024 - 21:56:08" eTime="16.12.2024 - 21:56:09" passed="5" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="65" status="Passed" >
+<Disp><![CDATA[Reg Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="64" status="Passed" >
+<Disp><![CDATA[Registration Iteration 4 (Row 4)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T71" iterID="5" >
+<Action rID="T72">
+<AName><![CDATA[Reg]]></AName>
+<Step rID="T73">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="85" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T74">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>MSO_Value</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=MSO=SID&</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=;</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="86" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T75">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>UserSession</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=name="userSession" value="</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="87" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T76">
+<Obj plainTxt="False" ><![CDATA[Url: welcome.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="88" status="Passed" >
+<Disp><![CDATA[Url: welcome.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T77">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=First time registering</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="89" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T78">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>16-дек-2024 21:56:09 GMT GMT; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="90" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T79">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>MSO=SID&1734368169; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="91" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T80">
+<Obj plainTxt="False" ><![CDATA[Url: login.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="92" status="Passed" >
+<Disp><![CDATA[Url: login.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T81">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=<blockquote>Thank you, <b>Bernadette</b>,</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:09]]></Time>
+<TimeTick>1734368169</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="93" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T82">
+<Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Origin: http://localhost:1080</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="94" >
+<Disp><![CDATA[Service: Add Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T83">
+<Obj plainTxt="False" ><![CDATA[Submit Form: login.pl_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="95" status="Passed" >
+<Disp><![CDATA[Submit Form: login.pl_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T84">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome, <b>Bernadette</b>, to the Web Tours reservation pages</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="96" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T85">
+<Obj plainTxt="False" ><![CDATA[Image: button_next.gif]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="97" status="Passed" >
+<Disp><![CDATA[Image: button_next.gif]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T86">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="98" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T87">
+<Obj plainTxt="False" ><![CDATA[Image: SignOff Button]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="99" status="Passed" >
+<Disp><![CDATA[Image: SignOff Button]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="16.12.2024 - 21:56:09" eTime="16.12.2024 - 21:56:10" passed="5" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="84" status="Passed" >
+<Disp><![CDATA[Reg Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="83" status="Passed" >
+<Disp><![CDATA[Registration Iteration 5 (Row 5)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T88" iterID="6" >
+<Action rID="T89">
+<AName><![CDATA[Reg]]></AName>
+<Step rID="T90">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="104" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T91">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>MSO_Value</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=MSO=SID&</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=;</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="105" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T92">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>UserSession</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=name="userSession" value="</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="106" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T93">
+<Obj plainTxt="False" ><![CDATA[Url: welcome.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="107" status="Passed" >
+<Disp><![CDATA[Url: welcome.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T94">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=First time registering</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="108" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T95">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>16-дек-2024 21:56:10 GMT GMT; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="109" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T96">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>MSO=SID&1734368170; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="110" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T97">
+<Obj plainTxt="False" ><![CDATA[Url: login.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:10]]></Time>
+<TimeTick>1734368170</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="111" status="Passed" >
+<Disp><![CDATA[Url: login.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T98">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=<blockquote>Thank you, <b>Amy</b>,</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="112" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T99">
+<Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Origin: http://localhost:1080</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="113" >
+<Disp><![CDATA[Service: Add Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T100">
+<Obj plainTxt="False" ><![CDATA[Submit Form: login.pl_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="114" status="Passed" >
+<Disp><![CDATA[Submit Form: login.pl_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T101">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome, <b>Amy</b>, to the Web Tours reservation pages</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="115" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T102">
+<Obj plainTxt="False" ><![CDATA[Image: button_next.gif]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="116" status="Passed" >
+<Disp><![CDATA[Image: button_next.gif]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T103">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="117" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T104">
+<Obj plainTxt="False" ><![CDATA[Image: SignOff Button]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="118" status="Passed" >
+<Disp><![CDATA[Image: SignOff Button]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="16.12.2024 - 21:56:10" eTime="16.12.2024 - 21:56:11" passed="5" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="103" status="Passed" >
+<Disp><![CDATA[Reg Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="102" status="Passed" >
+<Disp><![CDATA[Registration Iteration 6 (Row 6)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T105" iterID="7" >
+<Action rID="T106">
+<AName><![CDATA[Reg]]></AName>
+<Step rID="T107">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="123" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T108">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>MSO_Value</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=MSO=SID&</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=;</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="124" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T109">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>UserSession</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=name="userSession" value="</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="125" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T110">
+<Obj plainTxt="False" ><![CDATA[Url: welcome.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="126" status="Passed" >
+<Disp><![CDATA[Url: welcome.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T111">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=First time registering</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="127" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T112">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>16-дек-2024 21:56:11 GMT GMT; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="128" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T113">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>MSO=SID&1734368171; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:11]]></Time>
+<TimeTick>1734368171</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="129" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T114">
+<Obj plainTxt="False" ><![CDATA[Url: login.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="130" status="Passed" >
+<Disp><![CDATA[Url: login.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T115">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=<blockquote>Thank you, <b>Stuart</b>,</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="131" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T116">
+<Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Origin: http://localhost:1080</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="132" >
+<Disp><![CDATA[Service: Add Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T117">
+<Obj plainTxt="False" ><![CDATA[Submit Form: login.pl_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="133" status="Passed" >
+<Disp><![CDATA[Submit Form: login.pl_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T118">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome, <b>Stuart</b>, to the Web Tours reservation pages</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="134" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T119">
+<Obj plainTxt="False" ><![CDATA[Image: button_next.gif]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="135" status="Passed" >
+<Disp><![CDATA[Image: button_next.gif]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T120">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="136" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T121">
+<Obj plainTxt="False" ><![CDATA[Image: SignOff Button]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="137" status="Passed" >
+<Disp><![CDATA[Image: SignOff Button]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="16.12.2024 - 21:56:11" eTime="16.12.2024 - 21:56:12" passed="5" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="122" status="Passed" >
+<Disp><![CDATA[Reg Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="121" status="Passed" >
+<Disp><![CDATA[Registration Iteration 7 (Row 7)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T122" iterID="8" >
+<Action rID="T123">
+<AName><![CDATA[Reg]]></AName>
+<Step rID="T124">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="142" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T125">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>MSO_Value</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=MSO=SID&</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=;</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="143" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T126">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>UserSession</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=name="userSession" value="</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="144" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T127">
+<Obj plainTxt="False" ><![CDATA[Url: welcome.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="145" status="Passed" >
+<Disp><![CDATA[Url: welcome.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T128">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=First time registering</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="146" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T129">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>16-дек-2024 21:56:12 GMT GMT; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="147" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T130">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>MSO=SID&1734368172; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:12]]></Time>
+<TimeTick>1734368172</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="148" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T131">
+<Obj plainTxt="False" ><![CDATA[Url: login.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:13]]></Time>
+<TimeTick>1734368173</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="149" status="Passed" >
+<Disp><![CDATA[Url: login.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T132">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=<blockquote>Thank you, <b>Beverly</b>,</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:13]]></Time>
+<TimeTick>1734368173</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="150" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T133">
+<Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Origin: http://localhost:1080</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:13]]></Time>
+<TimeTick>1734368173</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="151" >
+<Disp><![CDATA[Service: Add Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T134">
+<Obj plainTxt="False" ><![CDATA[Submit Form: login.pl_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:13]]></Time>
+<TimeTick>1734368173</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="152" status="Passed" >
+<Disp><![CDATA[Submit Form: login.pl_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T135">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome, <b>Beverly</b>, to the Web Tours reservation pages</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:13]]></Time>
+<TimeTick>1734368173</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="153" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T136">
+<Obj plainTxt="False" ><![CDATA[Image: button_next.gif]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:13]]></Time>
+<TimeTick>1734368173</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="154" status="Passed" >
+<Disp><![CDATA[Image: button_next.gif]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T137">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:13]]></Time>
+<TimeTick>1734368173</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="155" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T138">
+<Obj plainTxt="False" ><![CDATA[Image: SignOff Button]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:13]]></Time>
+<TimeTick>1734368173</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="156" status="Passed" >
+<Disp><![CDATA[Image: SignOff Button]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="16.12.2024 - 21:56:12" eTime="16.12.2024 - 21:56:13" passed="5" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="141" status="Passed" >
+<Disp><![CDATA[Reg Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="140" status="Passed" >
+<Disp><![CDATA[Registration Iteration 8 (Row 8)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T139" iterID="9" >
+<Action rID="T140">
+<AName><![CDATA[Reg]]></AName>
+<Step rID="T141">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:13]]></Time>
+<TimeTick>1734368173</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="161" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T142">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>MSO_Value</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=MSO=SID&</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=;</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:13]]></Time>
+<TimeTick>1734368173</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="162" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T143">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>UserSession</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=name="userSession" value="</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:13]]></Time>
+<TimeTick>1734368173</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="163" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T144">
+<Obj plainTxt="False" ><![CDATA[Url: welcome.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="164" status="Passed" >
+<Disp><![CDATA[Url: welcome.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration9\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T145">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=First time registering</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="165" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T146">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>16-дек-2024 21:56:13 GMT GMT; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="166" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T147">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>MSO=SID&1734368173; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="167" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T148">
+<Obj plainTxt="False" ><![CDATA[Url: login.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="168" status="Passed" >
+<Disp><![CDATA[Url: login.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration9\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T149">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=<blockquote>Thank you, <b>Leslie</b>,</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="169" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T150">
+<Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Origin: http://localhost:1080</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="170" >
+<Disp><![CDATA[Service: Add Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T151">
+<Obj plainTxt="False" ><![CDATA[Submit Form: login.pl_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="171" status="Passed" >
+<Disp><![CDATA[Submit Form: login.pl_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration9\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T152">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome, <b>Leslie</b>, to the Web Tours reservation pages</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="172" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T153">
+<Obj plainTxt="False" ><![CDATA[Image: button_next.gif]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="173" status="Passed" >
+<Disp><![CDATA[Image: button_next.gif]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration9\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T154">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="174" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T155">
+<Obj plainTxt="False" ><![CDATA[Image: SignOff Button]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="175" status="Passed" >
+<Disp><![CDATA[Image: SignOff Button]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration9\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="16.12.2024 - 21:56:13" eTime="16.12.2024 - 21:56:14" passed="5" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="160" status="Passed" >
+<Disp><![CDATA[Reg Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="159" status="Passed" >
+<Disp><![CDATA[Registration Iteration 9 (Row 9)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T156" iterID="10" >
+<Action rID="T157">
+<AName><![CDATA[Reg]]></AName>
+<Step rID="T158">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="180" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T159">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>MSO_Value</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=MSO=SID&</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=;</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:14]]></Time>
+<TimeTick>1734368174</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="181" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T160">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>UserSession</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=name="userSession" value="</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:15]]></Time>
+<TimeTick>1734368175</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="182" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T161">
+<Obj plainTxt="False" ><![CDATA[Url: welcome.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:15]]></Time>
+<TimeTick>1734368175</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="183" status="Passed" >
+<Disp><![CDATA[Url: welcome.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration10\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T162">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=First time registering</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:15]]></Time>
+<TimeTick>1734368175</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="184" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T163">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>16-дек-2024 21:56:14 GMT GMT; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:15]]></Time>
+<TimeTick>1734368175</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="185" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T164">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>MSO=SID&1734368175; DOMAIN=localhost</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:15]]></Time>
+<TimeTick>1734368175</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="186" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T165">
+<Obj plainTxt="False" ><![CDATA[Url: login.pl]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:15]]></Time>
+<TimeTick>1734368175</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="187" status="Passed" >
+<Disp><![CDATA[Url: login.pl]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration10\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T166">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=<blockquote>Thank you, <b>Emily</b>,</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:15]]></Time>
+<TimeTick>1734368175</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="188" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T167">
+<Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Origin: http://localhost:1080</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:15]]></Time>
+<TimeTick>1734368175</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="189" >
+<Disp><![CDATA[Service: Add Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T168">
+<Obj plainTxt="False" ><![CDATA[Submit Form: login.pl_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:15]]></Time>
+<TimeTick>1734368175</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="190" status="Passed" >
+<Disp><![CDATA[Submit Form: login.pl_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration10\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T169">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome, <b>Emily</b>, to the Web Tours reservation pages</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:15]]></Time>
+<TimeTick>1734368175</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="191" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T170">
+<Obj plainTxt="False" ><![CDATA[Image: button_next.gif]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:15]]></Time>
+<TimeTick>1734368175</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="192" status="Passed" >
+<Disp><![CDATA[Image: button_next.gif]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration10\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T171">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Welcome to the Web Tours site</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:15]]></Time>
+<TimeTick>1734368175</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="193" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T172">
+<Obj plainTxt="False" ><![CDATA[Image: SignOff Button]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[16.12.2024 - 21:56:16]]></Time>
+<TimeTick>1734368176</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="194" status="Passed" >
+<Disp><![CDATA[Image: SignOff Button]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration10\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="16.12.2024 - 21:56:14" eTime="16.12.2024 - 21:56:16" passed="5" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="179" status="Passed" >
+<Disp><![CDATA[Reg Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="178" status="Passed" >
+<Disp><![CDATA[Registration Iteration 10 (Row 10)]]></Disp>
+</NodeArgs>
+</DIter>
+<Action rID="T173">
+<AName><![CDATA[vuser_end]]></AName>
+<Summary sTime="16.12.2024 - 21:56:16" eTime="16.12.2024 - 21:56:16" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="197" >
+<Disp><![CDATA[vuser_end Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Summary sTime="16.12.2024 - 21:56:05" eTime="16.12.2024 - 21:56:16" passed="50" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="4" status="Passed" >
+<Disp><![CDATA[Test Registration Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

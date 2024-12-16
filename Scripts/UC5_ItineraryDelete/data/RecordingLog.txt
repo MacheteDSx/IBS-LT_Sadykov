@@ -1,0 +1,161 @@
+[API Trapper      (29ff4:2b408)] Recording in 32-bit mode: C:\Program Files (x86)\HPE\LoadRunner\Bin\HP.LR.ProxyRecorderStarter.exe
+[Network Analyzer (2bae4:2b664)] ------------------------------------------------------------------------------------------
+[Network Analyzer (2bae4:2b664)] Load Network Traffic Analyzers:
+[Network Analyzer (2bae4:2b664)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (2bae4:2b664)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer (2bae4:2b664)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (2bae4:2b664)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer (2bae4:2b664)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer (2bae4:2b664)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (2bae4:2b664)] ------------------------------------------------------------------------------------------
+[Proxy Recording  (2bae4:2b664)] Started proxy on port 8888 listening IP 192.168.0.8, in asynchronous mode
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:61449
+[Proxy Recording  (2bae4:2be5c)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?signOff=true ...
+[Proxy Recording  (2bae4:2be5c)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?signOff=true ...
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:21819
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:21820
+[Proxy Recording  (2bae4:2be64)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv4 ...
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:21821
+[Proxy Recording  (2bae4:2bf6c)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv6 ...
+[Proxy Recording  (2bae4:2be64)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv4 ...
+[Proxy Recording  (2bae4:2bf70)] Trying to connect to http://detectportal.firefox.com/canonical.html ...
+[Proxy Recording  (2bae4:2bf6c)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv6 ...
+[Proxy Recording  (2bae4:2bf70)] Trying to connect to http://detectportal.firefox.com/canonical.html ...
+[Proxy Recording  (2bae4:2b388)] Received response from http://detectportal.firefox.com/success.txt?ipv6
+[Proxy Recording  (2bae4:2bfc0)] Received response from http://detectportal.firefox.com/success.txt?ipv4
+[Proxy Recording  (2bae4:2bfc0)] Sent response to client @ 192.168.0.8:21819
+[Proxy Recording  (2bae4:2b388)] Sent response to client @ 192.168.0.8:21820
+[Web Request      (2bae4:2bfc0)] "GET http://detectportal.firefox.com/success.txt?ipv4"   
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  2) Client -> Server @ : 372 bytes (Service=HTTP)
+[Web Request      (2bae4:2b388)] "GET http://detectportal.firefox.com/success.txt?ipv6"   
+[Network Analyzer (2bae4:2b388)]   (Sid:  2) Client -> Server @ : 372 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  2) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2b388)]   (Sid:  2) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  2) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2bfc0)] Received response from http://detectportal.firefox.com/canonical.html
+[Proxy Recording  (2bae4:2bfc0)] Sent response to client @ 192.168.0.8:21821
+[Network Analyzer (2bae4:2b388)]   (Sid:  2) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:43122
+[Proxy Recording  (2bae4:2bf70)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv4 ...
+[Web Request      (2bae4:2bfc0)] "GET http://detectportal.firefox.com/canonical.html"   
+[Proxy Recording  (2bae4:2bf70)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv4 ...
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  4) Client -> Server @ : 331 bytes (Service=HTTP)
+[Web Request      (2bae4:2b388)] "GET http://detectportal.firefox.com/success.txt?ipv6"   
+[Network Analyzer (2bae4:2b388)]   (Sid:  4) Client -> Server @ : 372 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  4) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2b388)]   (Sid:  4) Server -> Client : 208 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:43123
+[Proxy Recording  (2bae4:2be64)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv6 ...
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  4) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2be64)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv6 ...
+[Proxy Recording  (2bae4:2bfc0)] Received response from http://detectportal.firefox.com/success.txt?ipv4
+[Proxy Recording  (2bae4:2bfc0)] Sent response to client @ 192.168.0.8:43122
+[Web Request      (2bae4:2bfc0)] "GET http://detectportal.firefox.com/success.txt?ipv4"   
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  5) Client -> Server @ : 348 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  5) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  5) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2bfc0)] Received response from http://detectportal.firefox.com/success.txt?ipv6
+[Proxy Recording  (2bae4:2bfc0)] Sent response to client @ 192.168.0.8:43123
+[Web Request      (2bae4:2bfc0)] "GET http://detectportal.firefox.com/success.txt?ipv6"   
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  6) Client -> Server @ : 348 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  6) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  6) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2bfc0)] Received response from http://localhost:1080/cgi-bin/welcome.pl?signOff=true
+[Proxy Recording  (2bae4:2bfc0)] Sent response to client @ 192.168.0.8:61449
+[Web Request      (2bae4:2bfc0)] "GET http://localhost:1080/cgi-bin/welcome.pl?signOff=true"   
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  7) Client -> Server @ : 653 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  7) Server -> Client : 287 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid:  7) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:23651
+[Proxy Recording  (2bae4:2be5c)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?in=home ...
+[Proxy Recording  (2bae4:2be5c)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?in=home ...
+[Proxy Recording  (2bae4:2b388)] Received response from http://localhost:1080/cgi-bin/nav.pl?in=home
+[Proxy Recording  (2bae4:2b388)] Sent response to client @ 192.168.0.8:23651
+[Web Request      (2bae4:2b388)] "GET http://localhost:1080/cgi-bin/nav.pl?in=home"   
+[Network Analyzer (2bae4:2b388)]   (Sid:  8) Client -> Server @ : 512 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2b388)]   (Sid:  8) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2b388)]   (Sid:  8) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2b388)]   (Sid:  8) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:23811
+[Proxy Recording  (2bae4:2c368)] Trying to connect to http://localhost:1080/cgi-bin/login.pl ...
+[Proxy Recording  (2bae4:2c368)] Trying to connect to http://localhost:1080/cgi-bin/login.pl ...
+[Proxy Recording  (2bae4:2c368)] Received response from http://localhost:1080/cgi-bin/login.pl
+[Proxy Recording  (2bae4:2c368)] Sent response to client @ 192.168.0.8:23811
+[Network Analyzer (2bae4:2c368)]   (Sid:  9) Client -> Server @ : 599 bytes (Service=HTTP)
+[Web Request      (2bae4:2c368)] "POST http://localhost:1080/cgi-bin/login.pl"   
+[Network Analyzer (2bae4:2c368)]   (Sid:  9) Client -> Server @ : 131 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2c368)]   (Sid:  9) Server -> Client : 324 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2c368)]   (Sid:  9) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:23813
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:23814
+[Proxy Recording  (2bae4:2c368)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home ...
+[Proxy Recording  (2bae4:2c370)] Trying to connect to http://localhost:1080/cgi-bin/login.pl?intro=true ...
+[Proxy Recording  (2bae4:2c368)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home ...
+[Proxy Recording  (2bae4:2c370)] Trying to connect to http://localhost:1080/cgi-bin/login.pl?intro=true ...
+[Proxy Recording  (2bae4:2bfc0)] Received response from http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home
+[Proxy Recording  (2bae4:2bfc0)] Sent response to client @ 192.168.0.8:23813
+[Web Request      (2bae4:2bfc0)] "GET http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home"   
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 10) Client -> Server @ : 653 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 10) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 10) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 10) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2c388)] Received response from http://localhost:1080/cgi-bin/login.pl?intro=true
+[Proxy Recording  (2bae4:2c388)] Sent response to client @ 192.168.0.8:23814
+[Web Request      (2bae4:2c388)] "GET http://localhost:1080/cgi-bin/login.pl?intro=true"   
+[Network Analyzer (2bae4:2c388)]   (Sid: 11) Client -> Server @ : 648 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2c388)]   (Sid: 11) Server -> Client : 145 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2c388)]   (Sid: 11) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:23816
+[Proxy Recording  (2bae4:2c38c)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?page=itinerary ...
+[Proxy Recording  (2bae4:2c38c)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?page=itinerary ...
+[Proxy Recording  (2bae4:2bfc0)] Received response from http://localhost:1080/cgi-bin/welcome.pl?page=itinerary
+[Proxy Recording  (2bae4:2bfc0)] Sent response to client @ 192.168.0.8:23816
+[Web Request      (2bae4:2bfc0)] "GET http://localhost:1080/cgi-bin/welcome.pl?page=itinerary"   
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 12) Client -> Server @ : 670 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 12) Server -> Client : 132 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 12) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:23817
+[Proxy Recording  (2bae4:2c370)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=itinerary ...
+[Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:23818
+[Proxy Recording  (2bae4:2c370)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=itinerary ...
+[Proxy Recording  (2bae4:2c38c)] Trying to connect to http://localhost:1080/cgi-bin/itinerary.pl ...
+[Proxy Recording  (2bae4:2c38c)] Trying to connect to http://localhost:1080/cgi-bin/itinerary.pl ...
+[Proxy Recording  (2bae4:2c3dc)] Received response from http://localhost:1080/cgi-bin/itinerary.pl
+[Proxy Recording  (2bae4:2c3dc)] Sent response to client @ 192.168.0.8:23818
+[Web Request      (2bae4:2c3dc)] "GET http://localhost:1080/cgi-bin/itinerary.pl"   
+[Network Analyzer (2bae4:2c3dc)]   (Sid: 13) Client -> Server @ : 658 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2c3dc)]   (Sid: 13) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2c3dc)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (2bae4:2c388)] Received response from http://localhost:1080/cgi-bin/nav.pl?page=menu&in=itinerary
+[Proxy Recording  (2bae4:2c388)] Sent response to client @ 192.168.0.8:23817
+[Network Analyzer (2bae4:2c3dc)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2c3dc)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Web Request      (2bae4:2c388)] "GET http://localhost:1080/cgi-bin/nav.pl?page=menu&in=itinerary"   
+[Network Analyzer (2bae4:2c388)]   (Sid: 14) Client -> Server @ : 675 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2c388)]   (Sid: 14) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2b6b0)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2c388)]   (Sid: 14) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2b6b0)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2c388)]   (Sid: 14) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2b6b0)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2b6b0)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[User action                 ] StartTransactionEvent Del [Proxy Recording  (2bae4:2b308)] Client request from @ 192.168.0.8:23864
+[Proxy Recording  (2bae4:2c368)] Trying to connect to http://localhost:1080/cgi-bin/itinerary.pl ...
+[Proxy Recording  (2bae4:2c368)] Trying to connect to http://localhost:1080/cgi-bin/itinerary.pl ...
+[Proxy Recording  (2bae4:2c368)] Received response from http://localhost:1080/cgi-bin/itinerary.pl
+[Proxy Recording  (2bae4:2c368)] Sent response to client @ 192.168.0.8:23864
+[Network Analyzer (2bae4:2c368)]   (Sid: 15) Client -> Server @ : 747 bytes (Service=HTTP)
+[Web Request      (2bae4:2c368)] "POST http://localhost:1080/cgi-bin/itinerary.pl"   
+[Network Analyzer (2bae4:2c368)]   (Sid: 15) Client -> Server @ : 272 bytes (Service=HTTP)
+[Network Analyzer (2bae4:2c368)]   (Sid: 15) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2c368)]   (Sid: 15) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2c368)]   (Sid: 15) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2c368)]   (Sid: 15) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2b6b0)]   (Sid: 15) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 15) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 15) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 15) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (2bae4:2bfc0)]   (Sid: 15) Server -> Client : 1024 bytes  (Service=HTTP)
+[User action                 ] EndTransactionEvent Del 

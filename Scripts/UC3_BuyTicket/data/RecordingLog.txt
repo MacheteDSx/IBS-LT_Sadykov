@@ -1,0 +1,360 @@
+[API Trapper      (8670:16930)] Recording in 32-bit mode: C:\Program Files (x86)\HPE\LoadRunner\Bin\HP.LR.ProxyRecorderStarter.exe
+[Network Analyzer (896c:6168)] ------------------------------------------------------------------------------------------
+[Network Analyzer (896c:6168)] Load Network Traffic Analyzers:
+[Network Analyzer (896c:6168)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (896c:6168)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer (896c:6168)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (896c:6168)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer (896c:6168)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer (896c:6168)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (896c:6168)] ------------------------------------------------------------------------------------------
+[Proxy Recording  (896c:6168)] Started proxy on port 8888 listening IP 192.168.0.8, in asynchronous mode
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2179
+[Proxy Recording  (896c: a54)] Trying to connect to http://detectportal.firefox.com/canonical.html ...
+[Proxy Recording  (896c: a54)] Trying to connect to http://detectportal.firefox.com/canonical.html ...
+[Proxy Recording  (896c:5710)] Received response from http://detectportal.firefox.com/canonical.html
+[Proxy Recording  (896c:5710)] Sent response to client @ 192.168.0.8:2179
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2184
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2185
+[Proxy Recording  (896c: a54)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv4 ...
+[Proxy Recording  (896c:3900)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv6 ...
+[Proxy Recording  (896c: a54)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv4 ...
+[Proxy Recording  (896c:3900)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv6 ...
+[Web Request      (896c:5710)] "GET http://detectportal.firefox.com/canonical.html"   
+[Network Analyzer (896c:5710)]   (Sid:  1) Client -> Server @ : 355 bytes (Service=HTTP)
+[Network Analyzer (896c:5710)]   (Sid:  1) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (896c:5710)]   (Sid:  1) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:8dd0)] Received response from http://detectportal.firefox.com/success.txt?ipv4
+[Proxy Recording  (896c:8dd0)] Sent response to client @ 192.168.0.8:2184
+[Web Request      (896c:8dd0)] "GET http://detectportal.firefox.com/success.txt?ipv4"   
+[Network Analyzer (896c:8dd0)]   (Sid:  2) Client -> Server @ : 348 bytes (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid:  2) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid:  2) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:8dd0)] Received response from http://detectportal.firefox.com/success.txt?ipv6
+[Proxy Recording  (896c:8dd0)] Sent response to client @ 192.168.0.8:2185
+[Web Request      (896c:8dd0)] "GET http://detectportal.firefox.com/success.txt?ipv6"   
+[Network Analyzer (896c:8dd0)]   (Sid:  3) Client -> Server @ : 348 bytes (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid:  3) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid:  3) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2292
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2301
+[Proxy Recording  (896c:3900)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv4 ...
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2302
+[Proxy Recording  (896c:3900)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv4 ...
+[Proxy Recording  (896c: a54)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv6 ...
+[Proxy Recording  (896c: a54)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv6 ...
+[Proxy Recording  (896c:8dd0)] Received response from http://detectportal.firefox.com/success.txt?ipv4
+[Proxy Recording  (896c:8dd0)] Sent response to client @ 192.168.0.8:2301
+[Proxy Recording  (896c:5710)] Received response from http://detectportal.firefox.com/success.txt?ipv6
+[Proxy Recording  (896c:5710)] Sent response to client @ 192.168.0.8:2302
+[Web Request      (896c:8dd0)] "GET http://detectportal.firefox.com/success.txt?ipv4"   
+[Network Analyzer (896c:8dd0)]   (Sid:  5) Client -> Server @ : 348 bytes (Service=HTTP)
+[Web Request      (896c:5710)] "GET http://detectportal.firefox.com/success.txt?ipv6"   
+[Network Analyzer (896c:5710)]   (Sid:  5) Client -> Server @ : 348 bytes (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid:  5) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (896c:5710)]   (Sid:  5) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid:  5) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:5710)]   (Sid:  5) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2303
+[Proxy Recording  (896c:8db4)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?signOff=true ...
+[Proxy Recording  (896c:8db4)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?signOff=true ...
+[Proxy Recording  (896c:5710)] Received response from http://localhost:1080/cgi-bin/welcome.pl?signOff=true
+[Proxy Recording  (896c:5710)] Sent response to client @ 192.168.0.8:2303
+[Web Request      (896c:5710)] "GET http://localhost:1080/cgi-bin/welcome.pl?signOff=true"   
+[Network Analyzer (896c:5710)]   (Sid:  6) Client -> Server @ : 456 bytes (Service=HTTP)
+[Network Analyzer (896c:5710)]   (Sid:  6) Server -> Client : 287 bytes  (Service=HTTP)
+[Network Analyzer (896c:5710)]   (Sid:  6) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2325
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2326
+[Proxy Recording  (896c: a54)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?in=home ...
+[Proxy Recording  (896c: a54)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?in=home ...
+[Proxy Recording  (896c:8dd0)] Received response from http://localhost:1080/cgi-bin/nav.pl?in=home
+[Proxy Recording  (896c:8dd0)] Sent response to client @ 192.168.0.8:2325
+[Web Request      (896c:8dd0)] "GET http://localhost:1080/cgi-bin/nav.pl?in=home"   
+[Network Analyzer (896c:8dd0)]   (Sid:  7) Client -> Server @ : 512 bytes (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid:  7) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid:  7) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid:  7) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2327
+[Proxy Recording.Error (896c:9280)] Exception is caught while connecting to , message=Сбой операции дешифрования, см. внутреннее исключение.
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2337
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2347
+[Proxy Recording  (896c:9280)] Trying to connect to http://localhost:1080/cgi-bin/login.pl ...
+[Proxy Recording  (896c:9280)] Trying to connect to http://localhost:1080/cgi-bin/login.pl ...
+[Proxy Recording  (896c:9280)] Received response from http://localhost:1080/cgi-bin/login.pl
+[Proxy Recording  (896c:9280)] Sent response to client @ 192.168.0.8:2347
+[Network Analyzer (896c:9280)]   (Sid:  8) Client -> Server @ : 599 bytes (Service=HTTP)
+[Web Request      (896c:9280)] "POST http://localhost:1080/cgi-bin/login.pl"   
+[Network Analyzer (896c:9280)]   (Sid:  8) Client -> Server @ : 124 bytes (Service=HTTP)
+[Network Analyzer (896c:9280)]   (Sid:  8) Server -> Client : 298 bytes  (Service=HTTP)
+[Network Analyzer (896c:9280)]   (Sid:  8) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2352
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2353
+[Proxy Recording  (896c: a54)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home ...
+[Proxy Recording  (896c:9280)] Trying to connect to http://localhost:1080/cgi-bin/login.pl?intro=true ...
+[Proxy Recording  (896c: a54)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home ...
+[Proxy Recording  (896c:9280)] Trying to connect to http://localhost:1080/cgi-bin/login.pl?intro=true ...
+[Proxy Recording  (896c:8dd0)] Received response from http://localhost:1080/cgi-bin/login.pl?intro=true
+[Proxy Recording  (896c:8dd0)] Sent response to client @ 192.168.0.8:2353
+[Web Request      (896c:8dd0)] "GET http://localhost:1080/cgi-bin/login.pl?intro=true"   
+[Network Analyzer (896c:8dd0)]   (Sid:  9) Client -> Server @ : 622 bytes (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid:  9) Server -> Client : 145 bytes  (Service=HTTP)
+[Proxy Recording  (896c:5710)] Received response from http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home
+[Proxy Recording  (896c:5710)] Sent response to client @ 192.168.0.8:2352
+[Network Analyzer (896c:8dd0)]   (Sid:  9) Server -> Client : 1024 bytes  (Service=HTTP)
+[Web Request      (896c:5710)] "GET http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home"   
+[Network Analyzer (896c:5710)]   (Sid: 10) Client -> Server @ : 627 bytes (Service=HTTP)
+[Network Analyzer (896c:5710)]   (Sid: 10) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (896c:5710)]   (Sid: 10) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:5710)]   (Sid: 10) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2356
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2357
+[Proxy Recording  (896c:8db4)] Trying to connect to http://localhost:1080/WebTours/images/flights.gif ...
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2358
+[Proxy Recording  (896c: a54)] Trying to connect to http://localhost:1080/WebTours/images/itinerary.gif ...
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2359
+[Proxy Recording  (896c:3900)] Trying to connect to http://localhost:1080/WebTours/images/in_home.gif ...
+[Proxy Recording  (896c:8db4)] Trying to connect to http://localhost:1080/WebTours/images/flights.gif ...
+[Proxy Recording  (896c:9280)] Trying to connect to http://localhost:1080/WebTours/images/signoff.gif ...
+[Proxy Recording  (896c: a54)] Trying to connect to http://localhost:1080/WebTours/images/itinerary.gif ...
+[Proxy Recording  (896c:3900)] Trying to connect to http://localhost:1080/WebTours/images/in_home.gif ...
+[Proxy Recording  (896c:8ed8)] Received response from http://localhost:1080/WebTours/images/flights.gif
+[Proxy Recording  (896c:5710)] Received response from http://localhost:1080/WebTours/images/itinerary.gif
+[Proxy Recording  (896c:9280)] Trying to connect to http://localhost:1080/WebTours/images/signoff.gif ...
+[Proxy Recording  (896c:8ed8)] Sent response to client @ 192.168.0.8:2356
+[Proxy Recording  (896c:8dd0)] Received response from http://localhost:1080/WebTours/images/in_home.gif
+[Proxy Recording  (896c:5710)] Sent response to client @ 192.168.0.8:2357
+[Proxy Recording  (896c:8dd0)] Sent response to client @ 192.168.0.8:2358
+[Proxy Recording.Error (896c:8ed8)] Exception is caught during async read, message=Не удается записать данные в транспортное соединение: Программа на вашем хост-компьютере разорвала установленное подключение.
+[Proxy Recording  (896c:9b34)] Received response from http://localhost:1080/WebTours/images/signoff.gif
+[Proxy Recording.Error (896c:5710)] Exception is caught during async read, message=Не удается записать данные в транспортное соединение: Программа на вашем хост-компьютере разорвала установленное подключение.
+[Proxy Recording.Error (896c:8dd0)] Exception is caught during async read, message=Не удается записать данные в транспортное соединение: Программа на вашем хост-компьютере разорвала установленное подключение.
+[Proxy Recording  (896c:9b34)] Sent response to client @ 192.168.0.8:2359
+[Proxy Recording.Error (896c:9b34)] Exception is caught during async read, message=Не удается записать данные в транспортное соединение: Программа на вашем хост-компьютере разорвала установленное подключение.
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2371
+[Proxy Recording  (896c:626c)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?page=search ...
+[Proxy Recording  (896c:626c)] Trying to connect to http://localhost:1080/cgi-bin/welcome.pl?page=search ...
+[Proxy Recording  (896c:9b34)] Received response from http://localhost:1080/cgi-bin/welcome.pl?page=search
+[Proxy Recording  (896c:9b34)] Sent response to client @ 192.168.0.8:2371
+[Web Request      (896c:9b34)] "GET http://localhost:1080/cgi-bin/welcome.pl?page=search"   
+[Network Analyzer (896c:9b34)]   (Sid: 11) Client -> Server @ : 641 bytes (Service=HTTP)
+[Network Analyzer (896c:9b34)]   (Sid: 11) Server -> Client : 132 bytes  (Service=HTTP)
+[Network Analyzer (896c:9b34)]   (Sid: 11) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2374
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2375
+[Proxy Recording  (896c: a54)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=flights ...
+[Proxy Recording  (896c:9280)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl?page=welcome ...
+[Proxy Recording  (896c: a54)] Trying to connect to http://localhost:1080/cgi-bin/nav.pl?page=menu&in=flights ...
+[Proxy Recording  (896c:9280)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl?page=welcome ...
+[Proxy Recording  (896c:8dd0)] Received response from http://localhost:1080/cgi-bin/reservations.pl?page=welcome
+[Proxy Recording  (896c:8dd0)] Sent response to client @ 192.168.0.8:2375
+[Web Request      (896c:8dd0)] "GET http://localhost:1080/cgi-bin/reservations.pl?page=welcome"   
+[Proxy Recording  (896c:9b34)] Received response from http://localhost:1080/cgi-bin/nav.pl?page=menu&in=flights
+[Proxy Recording  (896c:9b34)] Sent response to client @ 192.168.0.8:2374
+[Network Analyzer (896c:8dd0)]   (Sid: 12) Client -> Server @ : 645 bytes (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid: 12) Server -> Client : 172 bytes  (Service=HTTP)
+[Web Request      (896c:9b34)] "GET http://localhost:1080/cgi-bin/nav.pl?page=menu&in=flights"   
+[Network Analyzer (896c:9b34)]   (Sid: 13) Client -> Server @ : 644 bytes (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid: 12) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:9b34)]   (Sid: 13) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid: 12) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:9b34)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid: 12) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2377
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2378
+[Network Analyzer (896c:9b34)]   (Sid: 13) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:626c)] Trying to connect to http://localhost:1080/WebTours/images/in_flights.gif ...
+[Proxy Recording  (896c:3900)] Trying to connect to http://localhost:1080/WebTours/images/home.gif ...
+[Proxy Recording  (896c:626c)] Trying to connect to http://localhost:1080/WebTours/images/in_flights.gif ...
+[Proxy Recording  (896c:3900)] Trying to connect to http://localhost:1080/WebTours/images/home.gif ...
+[Network Analyzer (896c:5710)]   (Sid: 12) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:5710)] Received response from http://localhost:1080/WebTours/images/in_flights.gif
+[Proxy Recording  (896c:9b34)] Received response from http://localhost:1080/WebTours/images/home.gif
+[Proxy Recording  (896c:5710)] Sent response to client @ 192.168.0.8:2377
+[Proxy Recording  (896c:9b34)] Sent response to client @ 192.168.0.8:2378
+[Proxy Recording.Error (896c:5710)] Exception is caught during async read, message=Не удается записать данные в транспортное соединение: Программа на вашем хост-компьютере разорвала установленное подключение.
+[Proxy Recording.Error (896c:9b34)] Exception is caught during async read, message=Не удается записать данные в транспортное соединение: Программа на вашем хост-компьютере разорвала установленное подключение.
+[Network Analyzer (896c:8dd0)]   (Sid: 12) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2379
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2397
+[Proxy Recording.Error (896c:8db4)] Exception is caught while connecting to , message=Сбой операции дешифрования, см. внутреннее исключение.
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2398
+[Proxy Recording  (896c:3900)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:3900)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:3900)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  (896c:3900)] Sent response to client @ 192.168.0.8:2398
+[Network Analyzer (896c:3900)]   (Sid: 14) Client -> Server @ : 740 bytes (Service=HTTP)
+[Web Request      (896c:3900)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer (896c:3900)]   (Sid: 14) Client -> Server @ : 241 bytes (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 14) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 14) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 14) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 14) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2401
+[Proxy Recording  (896c:626c)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:626c)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:626c)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  (896c:626c)] Sent response to client @ 192.168.0.8:2401
+[Network Analyzer (896c:626c)]   (Sid: 15) Client -> Server @ : 727 bytes (Service=HTTP)
+[Web Request      (896c:626c)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer (896c:626c)]   (Sid: 15) Client -> Server @ : 143 bytes (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 15) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 15) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 15) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 15) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2407
+[Proxy Recording  (896c:3900)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:3900)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:3900)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  (896c:3900)] Sent response to client @ 192.168.0.8:2407
+[Network Analyzer (896c:3900)]   (Sid: 16) Client -> Server @ : 727 bytes (Service=HTTP)
+[Web Request      (896c:3900)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer (896c:3900)]   (Sid: 16) Client -> Server @ : 322 bytes (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 16) Server -> Client : 301 bytes  (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 16) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 16) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 16) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2430
+[Proxy Recording  (896c:9280)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:9280)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:9280)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  (896c:9280)] Sent response to client @ 192.168.0.8:2430
+[Network Analyzer (896c:9280)]   (Sid: 17) Client -> Server @ : 702 bytes (Service=HTTP)
+[Web Request      (896c:9280)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer (896c:9280)]   (Sid: 17) Client -> Server @ : 35 bytes (Service=HTTP)
+[Network Analyzer (896c:9280)]   (Sid: 17) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (896c:9280)]   (Sid: 17) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:9280)]   (Sid: 17) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:9280)]   (Sid: 17) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:8dd0)]   (Sid: 17) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:aab4)]   (Sid: 17) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2436
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2439
+[Proxy Recording  (896c:626c)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:626c)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:626c)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  (896c:626c)] Sent response to client @ 192.168.0.8:2439
+[Network Analyzer (896c:626c)]   (Sid: 18) Client -> Server @ : 703 bytes (Service=HTTP)
+[Web Request      (896c:626c)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer (896c:626c)]   (Sid: 18) Client -> Server @ : 237 bytes (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 18) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 18) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 18) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 18) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2441
+[Proxy Recording  (896c:8db4)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:8db4)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:8db4)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  (896c:8db4)] Sent response to client @ 192.168.0.8:2441
+[Network Analyzer (896c:8db4)]   (Sid: 19) Client -> Server @ : 703 bytes (Service=HTTP)
+[Web Request      (896c:8db4)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer (896c:8db4)]   (Sid: 19) Client -> Server @ : 144 bytes (Service=HTTP)
+[Network Analyzer (896c:8db4)]   (Sid: 19) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (896c:8db4)]   (Sid: 19) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:8db4)]   (Sid: 19) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:8db4)]   (Sid: 19) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2442
+[Proxy Recording  (896c:626c)] Trying to connect to http://detectportal.firefox.com/canonical.html ...
+[Proxy Recording  (896c:626c)] Trying to connect to http://detectportal.firefox.com/canonical.html ...
+[Proxy Recording  (896c:88ac)] Received response from http://detectportal.firefox.com/canonical.html
+[Proxy Recording  (896c:88ac)] Sent response to client @ 192.168.0.8:2442
+[Web Request      (896c:88ac)] "GET http://detectportal.firefox.com/canonical.html"   
+[Network Analyzer (896c:88ac)]   (Sid: 20) Client -> Server @ : 331 bytes (Service=HTTP)
+[Network Analyzer (896c:88ac)]   (Sid: 20) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (896c:88ac)]   (Sid: 20) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2443
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2444
+[Proxy Recording  (896c:3900)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv4 ...
+[Proxy Recording  (896c:9280)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv6 ...
+[Proxy Recording  (896c:3900)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv4 ...
+[Proxy Recording  (896c:9280)] Trying to connect to http://detectportal.firefox.com/success.txt?ipv6 ...
+[Proxy Recording  (896c:88ac)] Received response from http://detectportal.firefox.com/success.txt?ipv6
+[Proxy Recording  (896c:88ac)] Sent response to client @ 192.168.0.8:2444
+[Proxy Recording  (896c:aab4)] Received response from http://detectportal.firefox.com/success.txt?ipv4
+[Proxy Recording  (896c:aab4)] Sent response to client @ 192.168.0.8:2443
+[Web Request      (896c:88ac)] "GET http://detectportal.firefox.com/success.txt?ipv6"   
+[Network Analyzer (896c:88ac)]   (Sid: 22) Client -> Server @ : 348 bytes (Service=HTTP)
+[Web Request      (896c:aab4)] "GET http://detectportal.firefox.com/success.txt?ipv4"   
+[Network Analyzer (896c:aab4)]   (Sid: 22) Client -> Server @ : 348 bytes (Service=HTTP)
+[Network Analyzer (896c:88ac)]   (Sid: 22) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (896c:aab4)]   (Sid: 22) Server -> Client : 208 bytes  (Service=HTTP)
+[Network Analyzer (896c:88ac)]   (Sid: 22) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:aab4)]   (Sid: 22) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2445
+[Proxy Recording  (896c:626c)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:626c)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:626c)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  (896c:626c)] Sent response to client @ 192.168.0.8:2445
+[Network Analyzer (896c:626c)]   (Sid: 23) Client -> Server @ : 703 bytes (Service=HTTP)
+[Web Request      (896c:626c)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer (896c:626c)]   (Sid: 23) Client -> Server @ : 336 bytes (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 23) Server -> Client : 301 bytes  (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 23) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 23) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 23) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2447
+[Proxy Recording  (896c:3900)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:3900)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:3900)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  (896c:3900)] Sent response to client @ 192.168.0.8:2447
+[Network Analyzer (896c:3900)]   (Sid: 24) Client -> Server @ : 702 bytes (Service=HTTP)
+[Web Request      (896c:3900)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer (896c:3900)]   (Sid: 24) Client -> Server @ : 34 bytes (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 24) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 24) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 24) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 24) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:aab4)]   (Sid: 24) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:88ac)]   (Sid: 24) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2458
+[Proxy Recording  (896c:626c)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:626c)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:626c)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  (896c:626c)] Sent response to client @ 192.168.0.8:2458
+[Network Analyzer (896c:626c)]   (Sid: 25) Client -> Server @ : 703 bytes (Service=HTTP)
+[Web Request      (896c:626c)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer (896c:626c)]   (Sid: 25) Client -> Server @ : 237 bytes (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 25) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 25) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 25) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:626c)]   (Sid: 25) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2466
+[Proxy Recording  (896c:3900)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:3900)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:3900)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  (896c:3900)] Sent response to client @ 192.168.0.8:2466
+[Network Analyzer (896c:3900)]   (Sid: 26) Client -> Server @ : 703 bytes (Service=HTTP)
+[Web Request      (896c:3900)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer (896c:3900)]   (Sid: 26) Client -> Server @ : 142 bytes (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 26) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 26) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 26) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:3900)]   (Sid: 26) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2476
+[Proxy Recording.Error (896c:626c)] Exception is caught while connecting to , message=Не удается прочитать данные из транспортного соединения: Программа на вашем хост-компьютере разорвала установленное подключение.
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2484
+[Proxy Recording  (896c:8db4)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:8db4)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:8db4)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  (896c:8db4)] Sent response to client @ 192.168.0.8:2484
+[Network Analyzer (896c:8db4)]   (Sid: 27) Client -> Server @ : 703 bytes (Service=HTTP)
+[Web Request      (896c:8db4)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer (896c:8db4)]   (Sid: 27) Client -> Server @ : 336 bytes (Service=HTTP)
+[Network Analyzer (896c:8db4)]   (Sid: 27) Server -> Client : 301 bytes  (Service=HTTP)
+[Network Analyzer (896c:8db4)]   (Sid: 27) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:8db4)]   (Sid: 27) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:8db4)]   (Sid: 27) Server -> Client : 1024 bytes  (Service=HTTP)
+[Proxy Recording  (896c:1688)] Client request from @ 192.168.0.8:2488
+[Proxy Recording  (896c:9280)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:9280)] Trying to connect to http://localhost:1080/cgi-bin/reservations.pl ...
+[Proxy Recording  (896c:9280)] Received response from http://localhost:1080/cgi-bin/reservations.pl
+[Proxy Recording  (896c:9280)] Sent response to client @ 192.168.0.8:2488
+[Network Analyzer (896c:9280)]   (Sid: 28) Client -> Server @ : 702 bytes (Service=HTTP)
+[Web Request      (896c:9280)] "POST http://localhost:1080/cgi-bin/reservations.pl"   
+[Network Analyzer (896c:9280)]   (Sid: 28) Client -> Server @ : 34 bytes (Service=HTTP)
+[Network Analyzer (896c:9280)]   (Sid: 28) Server -> Client : 172 bytes  (Service=HTTP)
+[Network Analyzer (896c:9280)]   (Sid: 28) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:9280)]   (Sid: 28) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:9280)]   (Sid: 28) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:b8c0)]   (Sid: 28) Server -> Client : 1024 bytes  (Service=HTTP)
+[Network Analyzer (896c:88ac)]   (Sid: 28) Server -> Client : 1024 bytes  (Service=HTTP)

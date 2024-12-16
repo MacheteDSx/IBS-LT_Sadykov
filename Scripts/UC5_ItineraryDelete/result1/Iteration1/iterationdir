@@ -1,0 +1,6 @@
+[vuser_init]
+SnapshotIndex=I1_vuser_init
+[ItineraryDelete]
+SnapshotIndex=I1_ItineraryDelete
+[vuser_end]
+SnapshotIndex=I1_vuser_end
