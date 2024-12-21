@@ -18,7 +18,6 @@ public class main extends HttpServlet {
         response.setContentType("application/json;charset=utf-8");
         response.setCharacterEncoding("UTF-8");
 
-        // Чтение данных JSON из тела запроса
         StringBuilder jsonRequest = new StringBuilder();
         String line;
         try (BufferedReader reader = request.getReader()) {
@@ -27,20 +26,16 @@ public class main extends HttpServlet {
             }
         }
 
-        // Преобразование JSON строки в объект
         Gson gson = new Gson();
         JsonObject inputJson = gson.fromJson(jsonRequest.toString(), JsonObject.class);
 
-        // Извлечение параметров из JSON
         double a = inputJson.get("a").getAsDouble();
         double b = inputJson.get("b").getAsDouble();
         String math = inputJson.get("math").getAsString();
 
-        // Результат вычисления
         double result = 0;
         String error = null;
 
-        // Выполнение арифметической операции в зависимости от переданного действия
         switch (math) {
             case "+":
                 result = a + b;
@@ -63,7 +58,6 @@ public class main extends HttpServlet {
                 break;
         }
 
-        // Подготовка ответа
         JsonObject jsonResponse = new JsonObject();
         if (error == null) {
             jsonResponse.addProperty("result", result);
@@ -71,7 +65,6 @@ public class main extends HttpServlet {
             jsonResponse.addProperty("error", error);
         }
 
-        // Отправка ответа
         PrintWriter out = response.getWriter();
         out.print(gson.toJson(jsonResponse));
     }
